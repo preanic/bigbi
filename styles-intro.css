@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: 'Martian Grotesk', sans-serif;
+  background-color: #202020;
+}
+
+.main-container {
+  width: 70vw;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #FDF5E5;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 14rem;
+}
+
+.title {
+  margin-top: 1rem;
+  font-size: 1.7rem;
+  font-variation-settings: "wght" 900, "wdth" 100;
+}
+
+.screens {
+  width: 100%;
+  height: 70%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.screen_link {
+  width: 48%;
+  height: 100%;
+  display: block; /* Делает <a> блочным элементом */
+  text-decoration: none; /* Убирает подчёркивание */
+  color: inherit;
+
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10rem;
+  font-variation-settings: "wght" 1000, "wdth" 100;
+  border: 2px solid #fff;
+  border-radius: 1rem;
+}
+
+.screen_link:hover {
+  color: #096E46;
+}
+
+
+
+/* FONTS */
+@font-face{
+  font-family: 'Martian Grotesk';
+  src: url('fonts/MartianGrotesk-VFVF.woff2') format('woff2');
+}

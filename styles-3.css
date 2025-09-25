@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    overflow: hidden; /* Убирает прокрутку */
+    user-select: none; /* Запрещает выделение текста */
+    -webkit-user-select: none; /* Для Safari и старых браузеров */
+    -moz-user-select: none; /* Для Firefox */
+    -ms-user-select: none; /* Для Edge */
+}
+
+body {
+  font-family: 'NT Somic', sans-serif;
+  font-feature-settings: "ss01" 1;
+  line-height: 1.6;
+  background-color: #000000;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #000000;
+}
+
+
+/* HEADER */
+.header {
+  width: auto;
+  height: 12vh;
+  background-color: #000000;
+  color: #FDF5E5;
+}
+
+.header-container {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 4rem;
+  font-weight: bold;
+  flex: 2;
+  padding: 0 1rem;
+}
