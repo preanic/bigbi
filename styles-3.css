@@ -1,7 +1,48 @@
+:root {
+  /* Фиолетовый */
+  --base-color: #4F4082;
+  --card-color: #4F4082;
+  --base-text-color: #FDF5E5;
+  --accent-color: #98FF38;
+  --new-badge-color: #FDF5E5;
+  --card-border-color: #66588F;
+
+
+  /* Светло-зелёный */
+  --base-color: #809D76;
+  --card-color: #809D76;
+  --base-text-color: #312C25;
+  --accent-color: #79FF20;
+  --new-badge-color: #312C25;
+  --card-border-color: #A6B898;
+
+  /* Молочный */
+  --base-color: #9D9376;
+  --card-color: #9D9376;
+  --base-text-color: #312C25;
+  --accent-color: #98FF38;
+  --new-badge-color: #312C25;
+  --card-border-color: #BAB198;
+
+  /* Чёрный */
+  --base-color: #202020;
+  --card-color: #202020;
+  --base-text-color: #FDF5E5;
+  --accent-color: #98FF38;
+  --new-badge-color: #A358FF;
+  --card-border-color: #3D3C3A;
+}
+
+.item-content {
+  border: 2px solid var(--card-border-color);
+}
+
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    letter-spacing: 0.01em;
 }
 
 html, body {
@@ -13,37 +54,239 @@ html, body {
 }
 
 body {
-  font-family: 'NT Somic', sans-serif;
-  font-feature-settings: "ss01" 1;
-  line-height: 1.6;
-  background-color: #000000;
+  font-family: 'Martian Grotesk', sans-serif;
+  font-variation-settings: "wght" 140, "wdth" 100;
+  background-color: var(--base-color);
+  color: var(--base-text-color);
 }
 
 .main-container {
   width: 100vw;
   height: 100vh;
   display: flex;
-  flex-direction: column;
-  background-color: #000000;
+  gap: 14px;
+  padding: 0 15px 15px 15px;
 }
 
 
 /* HEADER */
 .header {
   width: auto;
-  height: 12vh;
-  background-color: #000000;
-  color: #FDF5E5;
+  height: 13vh;
+  font-size: 3.5rem;
+  font-variation-settings: "wght" 942, "wdth" 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.header-container {
-  width: auto;
-  height: 100%;
+
+.section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  border: 2px solid var(--card-border-color);
+  padding: 1rem 2rem;
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+
+
+
+.title {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.1rem;
+  margin-bottom: 2px;
+}
+
+.drink {
+  flex: 3;
+}
+
+.ml {
+}
+
+.item-price {
+  width: 150px;
+  text-align: right;
+}
+
+.title-name {
+  font-size: 1.8rem;
+  font-variation-settings: "wght" 700, "wdth" 100;
+}
+
+.title-price {
+  font-size: 1.8rem;
+  font-variation-settings: "wght" 300, "wdth" 100;
+}
+
+.block .title {
+  margin-bottom: 0.4rem;
+}
+
+
+
+
+/* СКИДКИ */
+.discount-table-header {
+  font-size: 1.8rem;
+  font-variation-settings: "wght" 700, "wdth" 100;
+  display: flex;
+  justify-content: space-between;
+}
+
+.discount-table-header .item {
+  text-align: center;
+}
+
+
+.discount-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.discount-item {
+  border-radius: 80px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
   font-size: 4rem;
-  font-weight: bold;
-  flex: 2;
-  padding: 0 1rem;
+}
+
+.quantity {
+  font-variation-settings: "wght" 900, "wdth" 100;
+  color: var(--base-color);
+}
+
+.discount {
+  color: var(--base-color);
+}
+
+.d-10 .discount {
+  font-variation-settings: "wght" 150, "wdth" 100;
+}
+
+.d-15 .discount {
+  font-variation-settings: "wght" 400, "wdth" 100;
+}
+
+.d-20 .discount {
+  font-variation-settings: "wght" 800, "wdth" 100;
+}
+
+.d-25 .discount {
+  font-variation-settings: "wght" 1000, "wdth" 100;
+}
+
+
+.d-10 {
+  background-color: #F5A54A;
+}
+
+.d-15 {
+  background-color: #00D06A;
+}
+
+.d-20 {
+  background-color: #01D3F6;
+}
+
+.d-25 {
+  background-color: #DDA7FF;
+}
+
+
+
+
+/* АКЦИИ */
+.action {
+  padding: 0.8rem 0.9rem;
+  border-radius: 1em;
+  flex: 1;
+  color: var(--base-color);
+}
+
+.tg {
+  color: var(--base-text-color);
+  padding-bottom: 0;
+  padding-right: 0;
+  display: flex;
+  align-items: center;
+}
+
+.action-container {
+  gap: 16px;
+}
+
+.action:nth-child(1) {
+  background-color: #00D06A;
+}
+
+.action:nth-child(2) {
+  background-color: #01D3F6;
+}
+
+.action:nth-child(3) {
+  background-color: #DDA7FF;
+}
+
+.action-info {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.action-text {
+  font-size: 1rem;
+  font-variation-settings: "wght" 500, "wdth" 100;
+  line-height: 1.1rem;
+  display: flex;
+  align-items: center;
+}
+
+.action {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action-icon img {
+  height: 6rem;
+}
+
+.qr-code img {
+  height: 7rem;
+}
+
+
+
+
+
+/* FONTS */
+@font-face{
+  font-family: 'Martian Grotesk';
+  src: url('fonts/MartianGrotesk-VFVF.woff2') format('woff2');
 }

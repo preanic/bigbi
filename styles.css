@@ -1,12 +1,40 @@
 :root {
-  /* --base-color: #000000;
-  --card-color: #202020; */
+  /* Фиолетовый */
+  --base-color: #4F4082;
+  --card-color: #4F4082;
+  --base-text-color: #FDF5E5;
+  --accent-color: #98FF38;
+  --new-badge-color: #FDF5E5;
+  --card-border-color: #66588F;
 
+
+  /* Светло-зелёный */
+  --base-color: #809D76;
+  --card-color: #809D76;
+  --base-text-color: #312C25;
+  --accent-color: #79FF20;
+  --new-badge-color: #312C25;
+  --card-border-color: #A6B898;
+
+  /* Молочный */
+  --base-color: #9D9376;
+  --card-color: #9D9376;
+  --base-text-color: #312C25;
+  --accent-color: #98FF38;
+  --new-badge-color: #312C25;
+  --card-border-color: #BAB198;
+
+  /* Чёрный */
   --base-color: #202020;
   --card-color: #202020;
+  --base-text-color: #FDF5E5;
+  --accent-color: #98FF38;
+  --new-badge-color: #A358FF;
+  --card-border-color: #3D3C3A;
+}
 
-  --light-font: #FDF5E5;
-  --accent-font: #87E241;
+.item-content {
+  border: 2px solid var(--card-border-color);
 }
 
 
@@ -27,7 +55,7 @@ html, body {
 
 body {
   font-family: 'Martian Grotesk', sans-serif;
-  font-variation-settings: "wght" 150, "wdth" 100;
+  font-variation-settings: "wght" 140, "wdth" 100;
   background-color: var(--base-color);
 }
 
@@ -42,9 +70,9 @@ body {
 /* HEADER */
 .header {
   width: auto;
-  height: 12vh;
+  height: 13vh;
   background-color: var(--base-color);
-  color: var(--light-font);
+  color: var(--base-text-color);
 }
 
 .header-container {
@@ -59,11 +87,11 @@ body {
   font-size: 3.5rem;
   font-variation-settings: "wght" 942, "wdth" 100;
   flex: 2;
-  padding: 0 1.4rem;
+  padding-left: 1.4rem;
 }
 
 .header__right {
-  padding: 0 1.4rem;
+  padding: 0 1.4rem 0 2.8rem;
   flex: 1;
   display: flex;
   justify-content: space-between;
@@ -73,7 +101,7 @@ body {
 .header__price {
   font-size: 3.5rem;
   font-variation-settings: "wght" 942, "wdth" 100;
-  color: var(--accent-font);
+  color: var(--accent-color);
   flex: 1;
   display: flex;
   justify-content: flex-end;
@@ -83,12 +111,12 @@ body {
   display: flex;
   align-items: center;
   height: fit-content;
-  padding: 0.4rem 1rem 0.7rem 1rem;
-  border: 2px solid var(--accent-font);
-  border-radius: 1rem;
-  line-height: 1.3rem;
-  font-size: 1.3rem;
-  color: var(--accent-font);
+  padding: 0.3rem 1rem 0.5rem 1rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 1.8rem;
+  line-height: 1.5rem;
+  font-size: 1.2rem;
+  color: var(--accent-color);
   margin-top: 0.4rem;
   font-variation-settings: "wght" 500, "wdth" 100;
   text-align: center;
@@ -101,16 +129,16 @@ body {
     0% {
       transform: translateX(0) rotate(0deg);
     }
-    15% {
+    20% {
       transform: translateX(-3px) rotate(-3deg);
     }
-    30% {
+    40% {
       transform: translateX(3px) rotate(3deg);
     }
-    40% {
+    60% {
       transform: translateX(-2px) rotate(-2deg);
     }
-    50% {
+    80% {
       transform: translateX(0) rotate(0deg);
     }
 }
@@ -120,12 +148,12 @@ body {
 /* MENU */
 .menu {
   width: 100%;
-  padding: 0 12px 12px 12px;
+  padding: 0 15px 15px 15px;
   flex: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 столбца равной ширины */
   grid-template-rows: repeat(2, 1fr); /* 2 строки равной высоты */
-  gap: 10px; /* Отступы между элементами */
+  gap: 14px; /* Отступы между элементами */
 }
 
 
@@ -135,7 +163,7 @@ body {
   position: relative;
   display: flex;
   align-items: flex-end;
-  color: var(--light-font);
+  color: var(--base-text-color);
 }
 
 .flip-card:hover .item-inner {
@@ -151,7 +179,6 @@ body {
 .item-content {
   padding: 1rem 0.9rem;
   border-radius: 1em;
-  border: 2px solid #3D3C3A;
 }
 
 .front, .back {
@@ -291,11 +318,11 @@ body {
 }
 
 .new {
-  color: #C758FF;
+  color: var(--new-badge-color);
 }
 
 .hit .badge {
-  color: var(--accent-font);
+  color: var(--accent-color);
 }
 
 

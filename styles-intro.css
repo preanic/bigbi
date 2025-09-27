@@ -35,7 +35,7 @@ body {
 
 .title {
   margin-top: 1rem;
-  font-size: 1.7rem;
+  font-size: 1.69rem;
   font-variation-settings: "wght" 900, "wdth" 100;
 }
 
@@ -46,6 +46,7 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 14px;
 }
 
 .screen_link {
