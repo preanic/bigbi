@@ -143,6 +143,10 @@ body {
 
 
 /* СКИДКИ */
+.discount-header {
+  color: #98FF38;
+}
+
 .discount-table-header {
   font-size: 1.8rem;
   font-variation-settings: "wght" 700, "wdth" 100;
