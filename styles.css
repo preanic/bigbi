@@ -1,56 +1,82 @@
 :root {
-  /* Фиолетовый */
-  --base-color: #4F4082;
-  --card-color: #4F4082;
-  --base-text-color: #FDF5E5;
-  --accent-color: #98FF38;
-  --new-badge-color: #FDF5E5;
-  --card-border-color: #66588F;
-
-
-  /* Светло-зелёный */
-  --base-color: #809D76;
-  --card-color: #809D76;
-  --base-text-color: #312C25;
-  --accent-color: #79FF20;
-  --new-badge-color: #312C25;
-  --card-border-color: #A6B898;
-
-  /* Молочный */
-  --base-color: #9D9376;
-  --card-color: #9D9376;
-  --base-text-color: #312C25;
-  --accent-color: #98FF38;
-  --new-badge-color: #312C25;
-  --card-border-color: #BAB198;
-
-  /* Чёрный */
   --base-color: #202020;
   --card-color: #202020;
   --base-text-color: #FDF5E5;
   --accent-color: #98FF38;
   --new-badge-color: #A358FF;
-  --card-border-color: #3D3C3A;
+  --card-border: 3px solid #FFF7E910;
 }
 
-.item-content {
-  border: 2px solid var(--card-border-color);
+body.green {
+  --base-color: #096E46;
+  --card-color: #096E46;
+  --base-text-color: #FFFCEB;
+  --accent-color: #FF8989;
+  --new-badge-color: #FFFCEB;
+  --card-border: 2px solid #FFFCEB;
 }
+
+body.purple {
+  --base-color: #714F95;
+  --card-color: #714F95;
+  --base-text-color: #FDF5E5;
+  --accent-color: #98FF38;
+  --new-badge-color: #FDF5E5;
+  --card-border: 2px solid #FDF5E5;
+}
+
+body.light-green {
+  --base-color: #809D76;
+  --card-color: #809D76;
+  --base-text-color: #312C25;
+  --accent-color: #79FF20;
+  --new-badge-color: #312C25;
+  --card-border: 3px solid #FFF7E930;
+}
+
+body.milk {
+  --base-color: #d0c7ac;
+  --card-color: #d0c7ac;
+  --base-text-color: #312C25;
+  --accent-color: #49870f;
+  --new-badge-color: #312C25;
+  --card-border: 3px solid #FFF7E960;
+}
+
+body.coffee {
+  --base-color: #76695B;
+  --card-color: #76695B;
+  --base-text-color: #FDF5E5;
+  --accent-color: #FFF827;
+  --new-badge-color: #312C25;
+  --card-border: 2px solid #574C40;
+}
+
+body.coral {
+  --base-color: #D46259;
+  --card-color: #D46259;
+  --base-text-color: #F8EAA7;
+  --accent-color: #2C0A08;
+  --new-badge-color: #2C0A08;
+  --card-border: 2px solid #F8EAA7;
+}
+
+
+
 
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    letter-spacing: 0.01em;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  letter-spacing: 0.01em;
 }
 
 html, body {
-    overflow: hidden; /* Убирает прокрутку */
-    user-select: none; /* Запрещает выделение текста */
-    -webkit-user-select: none; /* Для Safari и старых браузеров */
-    -moz-user-select: none; /* Для Firefox */
-    -ms-user-select: none; /* Для Edge */
+  user-select: none; /* Запрещает выделение текста */
+  -webkit-user-select: none; /* Для Safari и старых браузеров */
+  -moz-user-select: none; /* Для Firefox */
+  -ms-user-select: none; /* Для Edge */
 }
 
 body {
@@ -70,7 +96,7 @@ body {
 /* HEADER */
 .header {
   width: auto;
-  height: 13vh;
+  height: 14vh;
   background-color: var(--base-color);
   color: var(--base-text-color);
 }
@@ -112,7 +138,7 @@ body {
   align-items: center;
   height: fit-content;
   padding: 0.3rem 1rem 0.5rem 1rem;
-  border: 2px solid var(--accent-color);
+  border: 4px solid var(--accent-color);
   border-radius: 1.8rem;
   line-height: 1.5rem;
   font-size: 1.2rem;
@@ -120,7 +146,9 @@ body {
   margin-top: 0.4rem;
   font-variation-settings: "wght" 500, "wdth" 100;
   text-align: center;
+}
 
+.vibrator {
   animation: vibrate 2s ease-in-out infinite;
 }
 
@@ -147,63 +175,55 @@ body {
 
 /* MENU */
 .menu {
-  width: 100%;
-  padding: 0 15px 15px 15px;
+  height: 86vh;
+  margin: 0 15px 15px 15px;
   flex: 1;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 столбца равной ширины */
   grid-template-rows: repeat(2, 1fr); /* 2 строки равной высоты */
-  gap: 14px; /* Отступы между элементами */
+  border: var(--card-border);
 }
 
 
 
 /* ITEM */
 .item {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
+  width: 100%;
+  height: 100%;
   color: var(--base-text-color);
+  overflow: hidden;
+  border-right: var(--card-border); /* Линия справа */
+  border-bottom: var(--card-border); /* Линия снизу */
 }
 
-.flip-card:hover .item-inner {
-  transform: rotateY(180deg);
+/* Убираем лишние границы для последних элементов */
+.item:nth-child(3n) { /* Последний столбец */
+  border-right: none;
+}
+
+.item:nth-last-child(-n + 3) { /* Последняя строка */
+  border-bottom: none;
 }
 
 .item-inner {
   height: 100%;
-  width: 100%;
   position: relative;
 }
 
 .item-content {
   padding: 1rem 0.9rem;
-  border-radius: 1em;
-}
-
-.front, .back {
-  position: absolute;
-  -webkit-backface-visibility: hidden; /* Safari */
-  backface-visibility: hidden;
   height: 100%;
-  width: 100%;
   display: flex;
   align-items: flex-end;
   background-color: var(--card-color);
+  position: relative;
 }
-
-/*
-.hit {
-  background: linear-gradient(#4E9A48, #8A9940);
-  border: 0;
-}
-*/
 
 .ingredients ul {
   padding: 0;
   margin: 0;
   font-size: 0.74rem;
-  line-height: 1.3em;
+  line-height: 1.2em;
   list-style-type: none;
   text-shadow: 0 3px 6px var(--card-color);
 }
@@ -254,53 +274,37 @@ body {
 
 
 
-/* FLIP ANIMATION */
-.flip-card .item-inner {
-  transform-style: preserve-3d;
-  animation: flip 20s infinite;
+/* SLIDER */
+.slider {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
-@keyframes flip {
-    0%, 48% {
-        transform: rotateY(0deg); /* Передняя сторона 5 секунд */
+.slider .item-inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* 2 карточки × 100% */
+    height: 200%;
+    animation: slide 20s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.slider .item-content {
+    width: 100%; /* 100% / 2 карточки */
+    height: 50%;
+}
+
+@keyframes slide {
+    0%, 51% {
+        transform: translateY(0); /* Карточка 1, ~9с */
     }
-    55% {
-        transform: rotateY(180deg); /* Переворот к задней стороне за 0.5 сек */
-    }
-    93% {
-        transform: rotateY(180deg); /* Задняя сторона 4 сек */
+    55%, 96% {
+        transform: translateY(-50%); /* Карточка 2, ~9с */
     }
     100% {
-        transform: rotateY(0deg); /* Возврат к передней стороне за 0.5 сек */
+        transform: translateY(0); /* Возврат к Карточке 1 */
     }
-}
-
-.flip-card:nth-child(1) .item-inner {
-    animation-delay: 0s; /* Первая карточка без задержки */
-}
-
-.flip-card:nth-child(2) .item-inner {
-    animation-delay: 0.2s; /* Вторая карточка с задержкой 2 сек */
-}
-
-.flip-card:nth-child(3) .item-inner {
-    animation-delay: 0.4s; /* Третья карточка с задержкой 4 сек */
-}
-
-.flip-card:nth-child(4) .item-inner {
-    animation-delay: 0.6s; /* Третья карточка с задержкой 4 сек */
-}
-
-.flip-card:nth-child(5) .item-inner {
-    animation-delay: 0.8s; /* Третья карточка с задержкой 4 сек */
-}
-
-.flip-card:nth-child(6) .item-inner {
-    animation-delay: 1s; /* Третья карточка с задержкой 4 сек */
-}
-
-.back {
-  transform: rotateY(180deg);
 }
 
 

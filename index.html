@@ -14,6 +14,16 @@
         </div>
       </div>
 
+      <div class="theme-switcher">
+        <div class="theme-circle default" data-theme="default" title="Dark"></div>
+        <div class="theme-circle purple" data-theme="purple" title="Purple"></div>
+        <div class="theme-circle green" data-theme="green" title="Green"></div>
+        <div class="theme-circle light-green" data-theme="light-green" title="Light Green"></div>
+        <div class="theme-circle coral" data-theme="coral" title="Coral"></div>
+        <div class="theme-circle milk" data-theme="milk" title="Milk"></div>
+        <div class="theme-circle coffee" data-theme="coffee" title="Coffee"></div>
+      </div>
+
       <div class="screens">
         <a href="1.html" class="screen_link">
           1
@@ -26,5 +36,25 @@
         </a>
       </div>
     </div>
+
+    <script>
+      const circles = document.querySelectorAll('.theme-circle');
+      const savedTheme = localStorage.getItem('theme') || 'default';
+      document.body.className = savedTheme;
+
+      // Highlight the active theme circle
+      circles.forEach(circle => {
+          if (circle.dataset.theme === savedTheme) {
+              circle.classList.add('active');
+          }
+          circle.addEventListener('click', () => {
+              circles.forEach(c => c.classList.remove('active')); // Remove active class from all
+              circle.classList.add('active'); // Add active class to clicked circle
+              const theme = circle.dataset.theme;
+              document.body.className = theme;
+              localStorage.setItem('theme', theme);
+          });
+      });
+    </script>
   </body>
 </html>
