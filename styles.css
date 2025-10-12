@@ -1,19 +1,19 @@
 :root {
-  --base-color: #202020;
-  --card-color: #202020;
+  --base-color: #1a1a1a;
+  --card-color: #1a1a1a;
   --base-text-color: #FDF5E5;
-  --accent-color: #98FF38;
-  --new-badge-color: #A358FF;
-  --card-border: 3px solid #FFF7E910;
+  --accent-color: #72D641;
+  --new-badge-color: #CA61FF;
+  --card-border: 3px solid #32322f;
 }
 
 body.green {
-  --base-color: #096E46;
-  --card-color: #096E46;
-  --base-text-color: #FFFCEB;
+  --base-color: #306A41;
+  --card-color: #306A41;
+  --base-text-color: #EFE4AF;
   --accent-color: #FF8989;
-  --new-badge-color: #FFFCEB;
-  --card-border: 2px solid #FFFCEB;
+  --new-badge-color: #EFE4AF;
+  --card-border: 2px solid #EFE4AF;
 }
 
 body.purple {
@@ -113,7 +113,7 @@ body {
   font-size: 3.5rem;
   font-variation-settings: "wght" 942, "wdth" 100;
   flex: 2;
-  padding-left: 1.4rem;
+  padding-left: 1.5rem;
 }
 
 .header__right {
@@ -222,7 +222,7 @@ body {
 .ingredients ul {
   padding: 0;
   margin: 0;
-  font-size: 0.74rem;
+  font-size: 0.83rem;
   line-height: 1.2em;
   list-style-type: none;
   text-shadow: 0 3px 6px var(--card-color);
@@ -316,7 +316,7 @@ body {
     top: 0.5rem;
 
     font-variation-settings: "wght" 1000, "wdth" 90;
-    font-size: 1.8rem;
+    font-size: 2rem;
     display: flex;
     align-items: center;
 }

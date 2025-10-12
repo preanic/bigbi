@@ -123,12 +123,12 @@ body {
   align-items: center;
   font-size: 10rem;
   font-variation-settings: "wght" 1000, "wdth" 100;
-  border: 2px solid #fff;
+  border: 2px solid #4C4B48;
   border-radius: 1rem;
 }
 
 .screen_link:hover {
-  color: #096E46;
+  color: #306A41;
 }
 
 

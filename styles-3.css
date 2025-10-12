@@ -1,11 +1,11 @@
 :root {
-  --base-color: #202020;
-  --card-color: #202020;
+  --base-color: #1a1a1a;
+  --card-color: #1a1a1a;
   --base-text-color: #FDF5E5;
   --dark-text-color: #202020;
-  --accent-color: #98FF38;
+  --accent-color: #72D641;
   --new-badge-color: #A358FF;
-  --card-border: 3px solid #FFF7E910;
+  --card-border: 3px solid #32322f;
 }
 
 body.purple {
@@ -159,7 +159,7 @@ body {
 .list-item {
   display: flex;
   justify-content: space-between;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 2px;
 }
 
@@ -295,6 +295,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  position: relative;
 }
 
 .tg {
@@ -311,11 +312,11 @@ body {
 
 
 .action:nth-child(1) {
-  background-color: #388340;
+  background-color: #603cc0;
 }
 
 .action:nth-child(2) {
-  background-color: #EF855B;
+  background-color: #388340;
 }
 
 .action:nth-child(3) {
@@ -325,16 +326,36 @@ body {
 
 
 .action-info {
+  height: 100%;
   display: flex;
   flex-direction: column;
+  z-index: 1;
+  justify-content: space-between;
+  font-variation-settings: "wght" 1000, "wdth" 100;
+  align-items: center;
+  text-align: center;
 }
 
 .action-text {
-  font-size: 1.8rem;
-  font-variation-settings: "wght" 700, "wdth" 100;
-  line-height: 2rem;
+  font-size: 2.5rem;
+
+  line-height: 3rem;
   display: flex;
-  align-items: center;
+
+  flex-direction: column;
+}
+
+.action-text__title, .action-text__subtitle {
+  text-align: center;
+}
+
+.action-text__subtitle {
+  font-variation-settings: "wght" 390, "wdth" 100;
+  font-size: 1.4rem;
+}
+
+.action-text__subsubtitle {
+  font-size: 2rem;
 }
 
 .action-date {
@@ -345,22 +366,19 @@ body {
 }
 
 .action-icon {
-  position: relative;
   display: flex;
   justify-content: center;
-  align-items: end;
+  align-items: center;
   flex: 1;
-  margin-top: 1.2rem;
-}
-
-.action:nth-child(1) .action-icon {
-  padding-left: 2.3rem;
-  margin-bottom: -0.4rem;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
 }
 
 .action-icon img {
-  position: absolute;
-  height: 100%;
+  width: 100%;
 }
 
 .qr-code img {
@@ -390,7 +408,7 @@ body {
     display: flex;
     width: 200%; /* 3 карточки × 100% */
     height: 100%;
-    animation: slide 20s infinite;
+    animation: slide 12s infinite;
     animation-timing-function: ease-in-out;
 }
 
@@ -400,10 +418,10 @@ body {
 }
 
 @keyframes slide {
-    0%, 40% {
+    0%, 44% {
         transform: translateX(0); /* Карточка 1, ~7с */
     }
-    50%, 90% {
+    50%, 94% {
         transform: translateX(-50%); /* Карточка 2, ~7с */
     }
     100% {
