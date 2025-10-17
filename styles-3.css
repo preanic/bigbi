@@ -206,6 +206,7 @@ body {
   font-variation-settings: "wght" 700, "wdth" 100;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 1rem;
 }
 
 .discount-table-header .item {
@@ -218,16 +219,18 @@ body {
   flex-direction: column;
   justify-content: space-between;
   gap: 15px;
+  flex: 1;
 }
 
 .discount-item {
-  border-radius: 80px;
+  border-radius: 90px;
   background-color: var(--accent-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem;
   font-size: 4rem;
+  flex: 1;
 }
 
 .quantity {
@@ -236,8 +239,11 @@ body {
   background: #00000015;
   border-radius: 80px;
   width: 8rem;
-  text-align: center;
   padding: 0.3rem 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .discount {
