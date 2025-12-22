@@ -75,24 +75,8 @@ body {
   background-color: #0D6741;
 }
 
-.theme-circle.light-green {
-  background-color: #809D76;
-}
-
-.theme-circle.milk {
-  background-color: #BAB091;
-}
-
-.theme-circle.purple {
-  background-color: #714F95;
-}
-
-.theme-circle.coffee {
-  background-color: #76695B;
-}
-
-.theme-circle.coral {
-  background-color: #D46259;
+.theme-circle.black {
+  background-color: #000000;
 }
 
 

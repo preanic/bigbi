@@ -16,53 +16,14 @@ body.green {
   --card-border: 2px solid #EFE4AF;
 }
 
-body.purple {
-  --base-color: #714F95;
-  --card-color: #714F95;
+body.black {
+  --base-color: #000000;
+  --card-color: #000000;
   --base-text-color: #FDF5E5;
-  --accent-color: #98FF38;
-  --new-badge-color: #FDF5E5;
-  --card-border: 2px solid #FDF5E5;
+  --accent-color: #72D641;
+  --new-badge-color: #CA61FF;
+  --card-border: 2px solid #202020;
 }
-
-body.light-green {
-  --base-color: #809D76;
-  --card-color: #809D76;
-  --base-text-color: #312C25;
-  --accent-color: #79FF20;
-  --new-badge-color: #312C25;
-  --card-border: 3px solid #FFF7E930;
-}
-
-body.milk {
-  --base-color: #d0c7ac;
-  --card-color: #d0c7ac;
-  --base-text-color: #312C25;
-  --accent-color: #49870f;
-  --new-badge-color: #312C25;
-  --card-border: 3px solid #FFF7E960;
-}
-
-body.coffee {
-  --base-color: #76695B;
-  --card-color: #76695B;
-  --base-text-color: #FDF5E5;
-  --accent-color: #FFF827;
-  --new-badge-color: #312C25;
-  --card-border: 2px solid #574C40;
-}
-
-body.coral {
-  --base-color: #D46259;
-  --card-color: #D46259;
-  --base-text-color: #F8EAA7;
-  --accent-color: #2C0A08;
-  --new-badge-color: #2C0A08;
-  --card-border: 2px solid #F8EAA7;
-}
-
-
-
 
 
 * {
